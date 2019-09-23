@@ -146,4 +146,6 @@ public class TestLambda {
                 .filter((e) -> e.getSalary() >= 5000)
                 .forEach(System.out::println);
     }
+
+
 }
