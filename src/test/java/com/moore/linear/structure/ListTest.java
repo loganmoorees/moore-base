@@ -24,16 +24,17 @@ public class ListTest {
         singleLinkedList.add("hahha");
         singleLinkedList.add(true);
         singleLinkedList.add(2.57);
-        System.out.println(singleLinkedList.length());
-        System.out.println(singleLinkedList.get(0));
-        Object o = singleLinkedList.remove(0);
-        System.out.println(o);
-        System.out.println(singleLinkedList.get(0));
-
-        System.out.println("----------");
-        System.out.println(singleLinkedList.length());
-
-        System.out.println("----------");
+        singleLinkedList.showList();
+//        System.out.println(singleLinkedList.length());
+//        System.out.println(singleLinkedList.get(0));
+//        Object o = singleLinkedList.remove(0);
+//        System.out.println(o);
+//        System.out.println(singleLinkedList.get(0));
+//
+//        System.out.println("----------");
+//        System.out.println(singleLinkedList.length());
+//
+//        System.out.println("----------");
     }
 
     @Test

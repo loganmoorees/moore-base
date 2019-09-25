@@ -2,6 +2,8 @@ package com.moore.linear.structure;
 
 import java.io.Serializable;
 
+import static java.lang.System.out;
+
 /**
  * 单向链表Java实现
  *
@@ -20,10 +22,6 @@ public class SingleLinkedList<E> implements Serializable {
          * 每个节点的数据
          */
         private E data;
-
-        /**
-         * 每个节点指向下一个节点的连接
-         */
         private Node<E> next;
 
         public Node(E data, Node<E> next) {
@@ -91,6 +89,19 @@ public class SingleLinkedList<E> implements Serializable {
         }
         size--;
         return current.data;
+    }
+
+    /**
+     * 打印链表的值
+     */
+    public void showList() {
+        Node<E> temp = this.node;
+        out.print("{");
+        while (temp.next != null) {
+            out.print(temp.data + ", ");
+            temp = temp.next;
+        }
+        out.println(temp.data + "}");
     }
 
     /**
