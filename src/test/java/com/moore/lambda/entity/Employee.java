@@ -1,10 +1,11 @@
-package com.moore.lambda;
+package com.moore.lambda.entity;
 
 import lombok.*;
 
 @Data
 @Builder
 @ToString
+@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 public class Employee {

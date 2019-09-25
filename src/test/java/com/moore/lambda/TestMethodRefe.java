@@ -1,5 +1,6 @@
 package com.moore.lambda;
 
+import com.moore.lambda.entity.Employee;
 import org.junit.Test;
 
 import java.io.PrintStream;
@@ -12,7 +13,7 @@ import java.util.function.Supplier;
 /**
  * @author moore
  * @date 2019-09-24 19:16
- * @desc
+ * @desc 引用方式测试
  */
 public class TestMethodRefe {
 

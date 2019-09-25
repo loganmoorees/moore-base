@@ -1,4 +1,4 @@
-package com.moore.lambda;
+package com.moore.lambda.interfaces;
 
 @FunctionalInterface
 public interface MyInterface {

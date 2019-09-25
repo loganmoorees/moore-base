@@ -1,4 +1,4 @@
-package com.moore.lambda;
+package com.moore.lambda.interfaces;
 
 public interface MyPredicate<T> {
 

@@ -1,5 +1,6 @@
 package com.moore.lambda;
 
+import com.moore.lambda.interfaces.MyInterface;
 import org.junit.Test;
 
 import java.util.Arrays;

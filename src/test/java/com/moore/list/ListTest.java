@@ -1,6 +1,6 @@
 package com.moore.list;
 
-import com.moore.lambda.Employee;
+import com.moore.lambda.entity.Employee;
 import com.moore.list.entity.EmloyeeList;
 import org.junit.Test;
 
