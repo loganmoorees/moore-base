@@ -53,10 +53,41 @@ public class SingleLinkedList<E> implements Serializable {
     }
 
     /**
+     * 头结点插入
+     *
+     * @param e
+     */
+    public void addHead(E e) {
+        Node<E> newNode = new Node<>(e, node);
+        node = newNode;
+    }
+
+    /**
+     * 指定位置进行添加
+     *
+     * @param e
+     * @param index
+     */
+    public void addIndex(E e, int index) {
+        checkIndex(index);
+        Node<E> newNode = new Node<>(e, null);
+        Node<E> beforeNode = node;
+        Node<E> nextNode = node;
+        for (int i = 0; i < index; i++) {
+            if (node.next != null) {
+                beforeNode = node.next;
+                nextNode = node.next.next;
+            }
+        }
+        newNode.next = nextNode;
+        beforeNode.next = newNode;
+        size++;
+    }
+
+    /**
      * 获取指定节点
      *
      * @param index
-     *
      * @return
      */
     public E get(int index) {
@@ -71,10 +102,9 @@ public class SingleLinkedList<E> implements Serializable {
      * 删除链表
      *
      * @param index
-     *
      * @return
      */
-    public E remove(int index) {
+    public void remove(int index) {
         checkIndex(index);
         Node<E> current = node, pre = new Node(), next = new Node();
         if (index > 0) {
@@ -88,7 +118,6 @@ public class SingleLinkedList<E> implements Serializable {
             node = node.next;
         }
         size--;
-        return current.data;
     }
 
     /**
