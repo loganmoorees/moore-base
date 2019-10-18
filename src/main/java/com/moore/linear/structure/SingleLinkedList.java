@@ -10,7 +10,7 @@ import static java.lang.System.out;
  * @author moore
  * @date 2019-09-03
  */
-public class SingleLinkedList<E> implements Serializable {
+public class SingleLinkedList<E> implements List<E>, Serializable {
 
     int size;
     private Node<E> node;
@@ -88,6 +88,7 @@ public class SingleLinkedList<E> implements Serializable {
      * 获取指定节点
      *
      * @param index
+     *
      * @return
      */
     public E get(int index) {
@@ -102,6 +103,7 @@ public class SingleLinkedList<E> implements Serializable {
      * 删除链表
      *
      * @param index
+     *
      * @return
      */
     public void remove(int index) {
