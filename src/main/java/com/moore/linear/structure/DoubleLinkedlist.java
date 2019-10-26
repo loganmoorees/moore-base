@@ -2,6 +2,8 @@ package com.moore.linear.structure;
 
 import java.io.Serializable;
 
+import static java.lang.System.out;
+
 /**
  * 双向链表
  *
@@ -13,7 +15,7 @@ public class DoubleLinkedlist<E> implements List<E>, Serializable {
 
     int size;
 
-    private Node<E> node;
+    private Node<E> first;
 
     private class Node<E> {
         private E data;
@@ -32,17 +34,54 @@ public class DoubleLinkedlist<E> implements List<E>, Serializable {
         }
     }
 
+    @Override
     public void add(E e) {
-        
+        Node<E> node = new Node<>(e, null, first);
+        if (size == 0)
+            first = node;
+        else {
+            first.pre = node;
+            first = node;
+        }
+        size++;
     }
 
     @Override
     public void remove(int index) {
-
+        
     }
 
     @Override
     public E get(int index) {
         return null;
+    }
+
+    public void addIndex(E e, int index) {
+        Node<E> node = new Node<>(e, null, null);
+        Node<E> f = first;
+        for (int i = 0; i < index; i++) {
+            if (f.next != null) {
+                f = f.next;
+            }
+        }
+        Node<E> before = f.pre;
+        before.next = node;
+        node.pre = f.pre;
+        f.pre = node;
+        node.next = f;
+        size++;
+    }
+
+    /**
+     * 打印链表的值
+     */
+    public void showList() {
+        Node<E> temp = this.first;
+        out.print("{");
+        while (temp.next != null) {
+            out.print(temp.data + ", ");
+            temp = temp.next;
+        }
+        out.println(temp.data + "}");
     }
 }

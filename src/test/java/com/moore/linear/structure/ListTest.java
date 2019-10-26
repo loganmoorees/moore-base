@@ -17,16 +17,17 @@ public class ListTest {
     LinkedList linkedList = new LinkedList();
     ArrayList arrayList = new ArrayList();
     SingleLinkedList singleLinkedList = new SingleLinkedList();
+    DoubleLinkedlist doubleLinkedlist = new DoubleLinkedlist();
 
     @Test
     public void testSingleLinkedList() {
-        singleLinkedList.add(0);
-        singleLinkedList.add("hahha");
-        singleLinkedList.add(true);
-        singleLinkedList.add(2.57);
-        singleLinkedList.showList();
-        singleLinkedList.addIndex("新加的节点", 2);
-        singleLinkedList.showList();
+        doubleLinkedlist.add(0);
+        doubleLinkedlist.add("hahha");
+        doubleLinkedlist.add(true);
+        doubleLinkedlist.showList();
+        doubleLinkedlist.add(2.57);
+        doubleLinkedlist.addIndex("新加的节点", 2);
+        doubleLinkedlist.showList();
     }
 
     @Test
