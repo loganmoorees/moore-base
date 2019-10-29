@@ -1,4 +1,4 @@
-package com.moore.linear.structure;
+package com.moore.structure.linear;
 
 import java.io.Serializable;
 

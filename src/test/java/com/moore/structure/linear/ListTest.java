@@ -1,8 +1,10 @@
 /* Copyright (C) 2019-2019 Hangzhou HSH Co. Ltd.
  * All right reserved.*/
-package com.moore.linear.structure;
+package com.moore.structure.linear;
 
 import org.junit.Test;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author moore
