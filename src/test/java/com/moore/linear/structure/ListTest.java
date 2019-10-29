@@ -4,9 +4,6 @@ package com.moore.linear.structure;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-
 /**
  * @author moore
  * @date 2019-09-23 16:57
@@ -14,20 +11,19 @@ import java.util.LinkedList;
  */
 public class ListTest {
 
-    LinkedList linkedList = new LinkedList();
-    ArrayList arrayList = new ArrayList();
-    SingleLinkedList singleLinkedList = new SingleLinkedList();
-    DoubleLinkedlist doubleLinkedlist = new DoubleLinkedlist();
+    private DoubleLinkedList<Object> doubleLinkedList = new DoubleLinkedList<>();
 
     @Test
     public void testSingleLinkedList() {
-        doubleLinkedlist.add(0);
-        doubleLinkedlist.add("hahha");
-        doubleLinkedlist.add(true);
-        doubleLinkedlist.showList();
-        doubleLinkedlist.add(2.57);
-        doubleLinkedlist.addIndex("新加的节点", 2);
-        doubleLinkedlist.showList();
+        doubleLinkedList.add(0);
+        doubleLinkedList.add("hahha");
+        doubleLinkedList.add(true);
+        doubleLinkedList.showList();
+        doubleLinkedList.add(2.57);
+        doubleLinkedList.addIndex("新加的节点", 2);
+        doubleLinkedList.showList();
+        doubleLinkedList.remove(1);
+        doubleLinkedList.showList();
     }
 
     @Test

@@ -9,11 +9,11 @@ import static java.lang.System.out;
  *
  * @author moore
  */
-public class DoubleLinkedlist<E> implements List<E>, Serializable {
+public class DoubleLinkedList<E> implements List<E>, Serializable {
 
     private static final long serialVersionUID = -1088356969477439558L;
 
-    int size;
+    transient int size;
 
     private Node<E> first;
 
@@ -48,7 +48,15 @@ public class DoubleLinkedlist<E> implements List<E>, Serializable {
 
     @Override
     public void remove(int index) {
-        
+        Node b = first;
+        for (int i = 0; i < index; i++) {
+            if (b.next != null) {
+                b = b.next;
+            }
+        }
+        b.pre.next = b.next;
+        b.next.pre = b.pre;
+        size--;
     }
 
     @Override
@@ -72,9 +80,6 @@ public class DoubleLinkedlist<E> implements List<E>, Serializable {
         size++;
     }
 
-    /**
-     * 打印链表的值
-     */
     public void showList() {
         Node<E> temp = this.first;
         out.print("{");
