@@ -2,6 +2,12 @@ package com.moore.cache;
 
 import java.util.HashMap;
 
+/**
+ * 非线程同步LRU缓存实现
+ *
+ * @param <K>
+ * @param <V>
+ */
 public class LRUCache<K, V> {
 
     private final int MAX_CACHE_SIZE;
