@@ -22,8 +22,6 @@ public class LeetCode {
      * [-1, -1, 2]
      * ]
      * <p>
-     * 题解：采用三指针的解法
-     * 1. 先排序
      *
      * @return
      */

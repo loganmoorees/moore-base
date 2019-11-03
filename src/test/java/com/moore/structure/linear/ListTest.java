@@ -2,9 +2,8 @@
  * All right reserved.*/
 package com.moore.structure.linear;
 
+import com.moore.sort.Sort;
 import org.junit.Test;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author moore
@@ -30,7 +29,11 @@ public class ListTest {
 
     @Test
     public void test() {
-        String str = "f3bff6906e1747a3b5d2a52b17b18c51";
-        System.out.println(str.length());
+        Sort sort = new Sort();
+        int[] nums = {125,4,54,13,47,65,66,21,42,48,62,1,1};
+        int[] ints = sort.bubbleSort(nums);
+        for (int i : ints) {
+            System.out.print(i + " ");
+        }
     }
 }
