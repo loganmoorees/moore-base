@@ -28,8 +28,8 @@ public class ListTest {
         Sort sort = new Sort();
 //        125, 4, 54, 13, 47, 65, 66, 21, 42, 48, 62, 1, 1
         int[] nums = {2, 5, 1, 4, 3};
-        int[] ints = sort.dualPivotQuickSort(nums, 0, nums.length - 1);
-        for (int i : ints) {
+        sort.singlePivotQuickSort(nums, 0, nums.length - 1);
+        for (int i : nums) {
             System.out.print(i + " ");
         }
     }

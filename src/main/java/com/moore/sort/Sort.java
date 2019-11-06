@@ -28,11 +28,39 @@ public class Sort {
     }
 
     /**
-     * 双轴快速排序
-     * <p>
-     * 理解：
+     * 单轴快速排序
      *
-     * @param
+     * @param nums
+     * @param start
+     * @param end
+     */
+    public void singlePivotQuickSort(int[] nums, int start, int end) {
+        if (start < end) {
+            int pivot = nums[start];
+            int i = start, j = start + 1;
+            while (j <= end) {
+                if (nums[j] < pivot) {
+                    i++;
+                    int temp = nums[i];
+                    nums[i] = nums[j];
+                    nums[j] = temp;
+                }
+                j++;
+            }
+            int temp = nums[start];
+            nums[start] = nums[i];
+            nums[i] = temp;
+            singlePivotQuickSort(nums, start, i - 1);
+            singlePivotQuickSort(nums, i + 1, end);
+        }
+    }
+
+    /**
+     * 双轴快速排序
+     *
+     * @param nums
+     * @param start
+     * @param end
      * @return
      */
     public int[] dualPivotQuickSort(int[] nums, int start, int end) {
