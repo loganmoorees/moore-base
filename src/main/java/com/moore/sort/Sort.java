@@ -1,7 +1,5 @@
 package com.moore.sort;
 
-import java.util.Arrays;
-
 public class Sort {
 
     /**
@@ -30,20 +28,38 @@ public class Sort {
     }
 
     /**
-     * 快速排序
+     * 双轴快速排序
      * <p>
      * 理解：
      *
-     * @param nums
+     * @param
      * @return
      */
-    public int[] quickSort(int[] nums) {
-        if (nums == null || nums.length <= 1) {
-            return nums;
+    public int[] dualPivotQuickSort(int[] nums, int start, int end) {
+        int i, j, pivot, temp;
+        if (start >= end) return nums;
+        i = start;
+        j = end;
+        pivot = nums[start];
+
+        while (i < j) {
+            while (nums[j] >= pivot && i < j) {
+                j--;
+            }
+
+            while (nums[i] <= pivot && i < j) {
+                i++;
+            }
+            if (i < j) {
+                temp = nums[j];
+                nums[j] = nums[i];
+                nums[i] = temp;
+            }
         }
-        int start = 0;
-        int end = nums.length;
-        int base = nums[start];
+        nums[start] = nums[i];
+        nums[i] = pivot;
+        dualPivotQuickSort(nums, start, j - 1);
+        dualPivotQuickSort(nums, j + 1, end);
         return nums;
     }
 }

@@ -1,5 +1,3 @@
-/* Copyright (C) 2019-2019 Hangzhou HSH Co. Ltd.
- * All right reserved.*/
 package com.moore.structure.linear;
 
 import com.moore.sort.Sort;
@@ -7,8 +5,6 @@ import org.junit.Test;
 
 /**
  * @author moore
- * @date 2019-09-23 16:57
- * @desc
  */
 public class ListTest {
 
@@ -30,8 +26,9 @@ public class ListTest {
     @Test
     public void test() {
         Sort sort = new Sort();
-        int[] nums = {125,4,54,13,47,65,66,21,42,48,62,1,1};
-        int[] ints = sort.bubbleSort(nums);
+//        125, 4, 54, 13, 47, 65, 66, 21, 42, 48, 62, 1, 1
+        int[] nums = {2, 5, 1, 4, 3};
+        int[] ints = sort.dualPivotQuickSort(nums, 0, nums.length - 1);
         for (int i : ints) {
             System.out.print(i + " ");
         }
