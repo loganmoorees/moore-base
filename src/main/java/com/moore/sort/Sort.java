@@ -90,4 +90,30 @@ public class Sort {
         dualPivotQuickSort(nums, j + 1, end);
         return nums;
     }
+
+    /**
+     * 二分查找(递归方式实现)
+     *
+     * @param nums
+     * @param target
+     * @param start
+     * @param end
+     * @return
+     */
+    public int binarySearch(int[] nums, int target, int start, int end) {
+        if (nums != null && start > end) {
+            return -1;
+        }
+        if (target > nums.length - 1 || start < 0 || start > nums.length - 1 || end < 0 || end > nums.length - 1) {
+            return -1;
+        }
+        int mid = start + (end - start) / 2;
+        if (nums[mid] == target) {
+            return mid;
+        } else if (target < nums[mid]) {
+            return binarySearch(nums, target, start, nums[mid - 1]);
+        } else {
+            return binarySearch(nums, target, nums[mid + 1], end);
+        }
+    }
 }

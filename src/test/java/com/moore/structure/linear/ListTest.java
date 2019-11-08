@@ -29,6 +29,8 @@ public class ListTest {
 //        125, 4, 54, 13, 47, 65, 66, 21, 42, 48, 62, 1, 1
         int[] nums = {2, 5, 1, 4, 3};
         sort.singlePivotQuickSort(nums, 0, nums.length - 1);
+        int result = sort.binarySearch(nums, 1, 0, nums.length - 1);
+        System.out.println("二分查找结果索引: " + result);
         for (int i : nums) {
             System.out.print(i + " ");
         }
