@@ -1,4 +1,4 @@
-package com.moore.lambda.entity;
+package com.moore.entity;
 
 import lombok.*;
 
@@ -6,8 +6,8 @@ import java.io.Serializable;
 
 @Data
 @Builder
-//@ToString
-//@EqualsAndHashCode
+@ToString
+@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 public class Employee implements Cloneable, Serializable {
@@ -19,11 +19,6 @@ public class Employee implements Cloneable, Serializable {
     private int age;
 
     private double salary;
-
-    @Override
-    public String toString() {
-        return super.toString();
-    }
 
     @Override
     public Object clone() throws CloneNotSupportedException {
