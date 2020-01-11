@@ -16,11 +16,11 @@ public class Subscribe implements Observer {
     public void update(Observable o, Object arg) {
         String data = ((Publish) o).getData();
         if ("1".equals(data)) {
-            System.out.println("通知消息为 ：" + data + ", 订阅者做出插入操作");
+            System.out.println("通知消息为 ：" + data + ", Subscribe做出插入操作");
         } else if ("2".equals(data)) {
-            System.out.println("通知消息为 ：" + data + ", 订阅者做出修改操作");
+            System.out.println("通知消息为 ：" + data + ", Subscribe做出修改操作");
         } else {
-            System.out.println("通知消息为 ：" + data + ", 订阅者做出删除操作");
+            System.out.println("通知消息为 ：" + data + ", Subscribe做出删除操作");
         }
     }
 }

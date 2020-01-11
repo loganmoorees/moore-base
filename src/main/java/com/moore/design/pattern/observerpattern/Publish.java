@@ -1,7 +1,5 @@
 package com.moore.design.pattern.observerpattern;
 
-import lombok.Data;
-
 import java.util.Observable;
 
 /**
@@ -19,7 +17,7 @@ public class Publish extends Observable {
     }
 
     public void setData(String data) {
-        if (!this.data.equals(data)){
+        if (!this.data.equals(data)) {
             this.data = data;
             setChanged();
         }
@@ -29,6 +27,7 @@ public class Publish extends Observable {
     public static void main(String[] args) {
         Publish publish = new Publish();
         Subscribe subscribe = new Subscribe(publish);
+        Other other = new Other(publish);
         publish.setData("aa");
     }
 }
